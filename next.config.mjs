@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'i.ibb.co',
       },
+      {
+        protocol: 'https',
+        hostname: 'tikko-events-images.s3.us-east-1.amazonaws.com',
+      },
     ],
   },
   env: {

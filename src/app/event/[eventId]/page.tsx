@@ -18,7 +18,7 @@ import { Badge } from "@/components/ui/badge";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import heroImage from "@/assets/hero-event-image.jpg";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import EventPageClient from "./EventPageClient";
 
 interface TicketType {
@@ -111,6 +111,13 @@ async function getEventData(eventId: string): Promise<EventData | null> {
     return eventData;
   }
   return null;
+}
+
+export async function generateViewport(): Promise<Viewport> {
+  return {
+    width: 'device-width',
+    initialScale: 1,
+  };
 }
 
 export async function generateMetadata({

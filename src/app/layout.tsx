@@ -1,10 +1,14 @@
 export const metadata = {
   title: "Tikko - Plataforma de Eventos",
   description: "Descubra, crie e viva experiências inesquecíveis. Tikko é sua plataforma moderna para gerenciar e vender ingressos para diversos eventos.",
-  viewport: "width=device-width, initial-scale=1.0",
   icons: [
     { url: "https://storage.googleapis.com/gpt-engineer-file-uploads/VR5yHcRBkNV0kAV6uidodYLUM0p2/uploads/1757940449261-mark.png", rel: "icon" },
   ],
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
 };
 
 

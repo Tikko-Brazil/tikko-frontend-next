@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['i.ibb.co'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+      },
+    ],
   },
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
@@ -10,9 +15,7 @@ const nextConfig = {
     serverActions: {
       enabled: true
     },
-    experimental: {
-      optimizePackageImports: [] //"lodash", "date-fns"
-    },
+    optimizePackageImports: [], //"lodash", "date-fns"
     optimizeServerReact: false,
   },
   webpack: (config) => {
